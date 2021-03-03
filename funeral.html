@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <title>Funeral | Jeannie Brooks</title>
+    <meta name="description" content="Remembering Jeannie Brooks">
+    <meta name="author" content="Reed Colloton">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    	  integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/main-v6.css">
+    <link rel="icon" href="static/favicon.png">
+    <link rel="apple-touch-icon" href="static/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="content-wrapper">
+      <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #6b3077;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Jeannie Brooks</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+                  data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+                  aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="memories.html">Memories</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="album.html">Photo Album</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="jumbotron jumbotron-fluid">
+        <div class="mx-5 my-5">
+          <h1 class="display-8 text-center">Funeral</h1>
+          <p class="lead text-center mb-4">Feb 13, 2021</p>
+            
+            <div class="row justify-content-md-center">
+                <div class="col-lg-6 col-md-8 col-12">
+                    <div class="ratio ratio-16x9">
+                        <video id="funeral-video" poster="https://files.rememberingjeanniebrooks.com/funeral.webp" controls>
+                            <source src="https://files.rememberingjeanniebrooks.com/funeral.mp4" type="video/mp4" preload="metadata">
+                            Your browser does not support the video element.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+        video = document.querySelector("#funeral-video");
+        video.addEventListener("click", () => {
+            console.log(1);
+            openFullscreen();
+        });
+        
+        function openFullscreen() {
+            if (video.requestFullscreen) {
+                video.requestFullscreen();
+            } else if (video.webkitRequestFullscreen) { 
+                // Safari
+                video.webkitRequestFullscreen();
+            } else if (video.msRequestFullscreen) { 
+                // IE11
+                video.msRequestFullscreen();
+            }
+        };
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <footer class="footer my-auto">
+      <div class="py-4 bg-light text-center text-muted">
+        <span>Copyright &copy; 2021 Brooks Family. All Rights Reserved.</span>
+        <br>
+        <br>
+        <p><a class="submit-link" href="https://reedcolloton.com/contact/">Contact Reed Colloton For Help</a></p>
+      </div>
+    </footer>
+    </div>
+  </body>
+</html>
