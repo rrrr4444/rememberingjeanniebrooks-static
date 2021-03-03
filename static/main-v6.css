@@ -1,0 +1,42 @@
+body {
+	font-family: "Playfair Display", sans-serif;
+}
+
+/* for footer */
+.content-wrapper {
+	min-height: 100vh;
+}
+.footer {
+	height: 20px;
+	padding: 0px;
+	margin: 0px;
+}
+  
+
+/* for elements below header on home screen */
+.flex-equal > * {
+flex: 1;
+}
+
+@media (min-width: 768px) {
+.flex-md-equal > * {
+	flex: 1;
+	}
+}
+
+
+.submit-link {
+	color: #3C7730;
+	text-decoration: underline;
+  }
+  
+.submit-link:hover, .submit-link:active {
+	color: #68965f;
+	text-decoration: none;
+  }
+
+.custom-button:hover, .custom-button:active {
+	color: white;
+	background-color: #6b3077;
+
+}
