@@ -64,8 +64,27 @@
         </div>
       </div>
     </div>
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
 
+    <script>
+      video = document.querySelector("#celebration-video");
+      video.addEventListener("click", () => {
+        openFullscreen();
+      });
+  
+      function openFullscreen() {
+        if (video.requestFullscreen) {
+          video.requestFullscreen();
+        } else if (video.webkitRequestFullscreen) {
+          // Safari
+          video.webkitRequestFullscreen();
+        } else if (video.msRequestFullscreen) {
+          // IE11
+          video.msRequestFullscreen();
+        }
+      };
+    </script>
+
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
       <div class="bg-light me-md-3 pt-3 my-3 pb-5 px-3 pt-md-5 px-md-5 text-center text-dark overflow-hidden"
         style="border-radius: 21px 21px 0 0">
         <div>
